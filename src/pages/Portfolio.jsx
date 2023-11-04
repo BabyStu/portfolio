@@ -1,22 +1,39 @@
-export default function Blog() {
+import Project from '../components/Project';
+
+export default function Portfolio() {
+
+  const projects = [
+    {
+      name: 'One Red Paperclip',
+      description: 'This app is designed to be a trading website.',
+      technologies: 'HTML, CSS, JavaScript, Node.js, Express.js, MySQL, Sequelize, Handlebars.js, Heroku',
+      imageUrl: 'https://raw.githubusercontent.com/sthogue/Online-marketplace/main/public/images/one-red-paperclip-5102fbf3bf3c.herokuapp.com_.png',
+      projectLink: 'https://one-red-paperclip-5102fbf3bf3c.herokuapp.com',
+    },
+    {
+      name: 'Tech Blog',
+      description: 'This is a tech blog',
+      technologies: 'HTML, CSS, JavaScript, Node.js, Express.js, MySQL, Sequelize, Handlebars.js, Heroku',
+      imageUrl: 'https://raw.githubusercontent.com/BabyStu/techBlog/main/images/screenshot.png',
+      projectLink: 'https://techblog-09-431b5b6e5f40.herokuapp.com/',
+    },
+    {
+      name: 'JATE',
+      description: 'Just Another Text Editor',
+      technologies: 'HTML, CSS, JavaScript, Node.js, Express.js, MySQL, Sequelize, Handlebars.js, Heroku',
+      imageUrl: 'https://raw.githubusercontent.com/BabyStu/textEditor/main/images/JATE.png',
+      projectLink: 'https://quiet-spire-05804-7088b30d5c2f.herokuapp.com/',
+    }
+  ];
+
   return (
-    <div>
-      <h1>Blog Page</h1>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
-    </div>
-  );
-}
+    <section className="p-4">
+      <h2 className="text-4xl font-bold mb-4">Portfolio</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <Project key={index} {...project} />
+        ))}
+      </div>
+    </section>
+  )
+};

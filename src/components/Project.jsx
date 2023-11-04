@@ -1,22 +1,24 @@
 import React from 'react';
 
-function Project({ title, description, technologies, imageUrl, projectUrl }) {
-    return (
-    <div className="">
-      <h3 className="">{title}</h3>
-      <p className="">{description}</p>
-      <p className="">Technologies: {technologies}</p>
-      <img src={imageUrl} alt={title} className="max-w-full h-auto mb-4" />
-      {projectUrl && (
-        <a
-          href={projectUrl}
-          target="_blank"
-          rel=""
-          className=""
-        >
-          View Project
-        </a>
-      )}
+function Project({ name, description, technologies, imageUrl, projectLink }) {
+  return (
+    <div className="project border border-gray-300 rounded-md p-4 mb-8">
+      <h3 className="text-2xl font-bold mb-2">{name}</h3>
+      <p className="text-gray-800 text-xl mb-2">{description}</p>
+      <p className="text-green-700 text-xl mb-2">Technologies used: {technologies}</p>
+      <div className="overflow-hidden">
+        <img src={imageUrl} alt={name} className="projectImage max-w-full max-h-full h-auto" />
+        {projectLink && (
+          <a
+            href={projectLink}
+            target="_blank"
+            rel=""
+            className="text-red-500 hover:underline inline-block text-lg"
+          >
+            View Project
+          </a>
+        )}
+      </div>
     </div>
   );
 };
