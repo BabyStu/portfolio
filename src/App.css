@@ -2,7 +2,33 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  /* background-color: grey; */
   /* text-align: center; */
+}
+
+.grey{
+  background-color: #6e6e6e;
+  color: #fff;
+}
+
+.prof {
+  border-radius: 50%;
+}
+
+.hoverGlow:hover {
+  filter: drop-shadow(0 0 1em #ffdd44aa);
+
+}
+
+/* .hoverGlow {
+  will-change: filter;
+  transition: filter;
+} */
+
+.maxSize {
+  width: 10%;
+  height: 10%;
+  /* object-fit: cover; */
 }
 
 .projectImage {
@@ -37,7 +63,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
+/* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -50,7 +76,7 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
   padding: 2em;
@@ -113,4 +139,42 @@
 .flexRow a {
   text-align: center;
   flex: 1;
+}
+
+.backColor {
+  background-color: #282c34;
+  color: white;
+}
+
+.projectCard {
+
+  width: 30%;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.projectCardContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.anchors a{
+  text-decoration: underline;
+  color: #fff;
+}
+
+.anchors a:hover{
+  color: rgb(35, 25, 25);
+
+  filter: drop-shadow(0 0 2em #ffffff);
+
+}
+
+.underline{
+  text-decoration: underline;
 }

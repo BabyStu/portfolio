@@ -53,7 +53,7 @@ function Form() {
   };
 
   return (
-    <div className="container flexCard">
+    <div className="container">
 
       <form className="form" onSubmit={handleFormSubmit}>
         <input
