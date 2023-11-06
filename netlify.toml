@@ -1,4 +1,5 @@
 [build]
+  base = ""
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "dist" # Change this to your output directory
+  publish = "build" # Change this to your output directory
