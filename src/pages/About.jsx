@@ -1,9 +1,12 @@
+import React from 'react';
+import profileImage from '../assets/profile.png';
+
 export default function About() {
   return (
     <div>
       <h1 className="center title">About Me</h1>
       <div className="center">
-        <img src="src/assets/profile.png" alt="Steve Weede" className="prof maxSize" />
+        <img src={profileImage} alt="Steve Weede" className="prof maxSize" />
       </div>
       <p>
       I'm a web developer with a unique blend of financial expertise and a passion for creating engaging online experiences. With a background in finance and a Bachelor's degree in accounting, I bring a data-driven and detail-oriented approach to web development.
