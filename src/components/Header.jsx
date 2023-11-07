@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <header className="footer">
-            <h1 className="center" style={{ fontFamily: 'Arial' }}>Steve Weede</h1>
+            <h1 className="center bold" style={{ fontFamily: 'Arial' }}>SW</h1>
         </header>
     );
 };
