@@ -171,10 +171,20 @@
 .anchors a:hover{
   color: rgb(35, 25, 25);
 
-  filter: drop-shadow(0 0 2em #ffffff);
+  /* filter: drop-shadow(0 0 2em #ffffff); */
 
 }
 
 .underline{
   text-decoration: underline;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 5.5em;
+}
+
+.bold:hover{
+  color: gold;
+  transition: all 1.0s ease-in-out;
 }
