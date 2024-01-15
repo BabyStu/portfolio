@@ -87,14 +87,16 @@ export default function Resume() {
   return (
     <div>
       <section>
-        <h3 className='center title'>Experience</h3>
+        <h3 className='center resumeBox font'>Resume</h3>
+        <div className='container'>
         {jobs.map((job, index) => (
           <Job key={index} {...job} />
         ))}
+        </div>
       </section>
       <section className='flexContainer'>
         <div>
-          <h3 className='center title'>Languages</h3>
+          <h3 className='center title underline'>Languages</h3>
           <ul className='card'>
             {skills.map((skill, index) => (
               <li key={index}>{skill}</li>
@@ -102,7 +104,7 @@ export default function Resume() {
           </ul>
         </div>
         <div>
-          <h3 className='center title'>Education</h3>
+          <h3 className='center title'><span className='underline'>Education</span></h3>
           {education.map((edu, index) => (
           <Job key={index} {...edu} />
         ))}

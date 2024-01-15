@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: '#DAA520', // Change this to the actual gold color you want
+        gold: '#DAA520',
       },
     },
   },

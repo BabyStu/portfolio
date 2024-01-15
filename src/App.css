@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
   /* background-color: grey; */
   /* text-align: center; */
 }
@@ -15,34 +15,17 @@
   border-radius: 50%;
 }
 
-.hoverGlow:hover {
-  filter: drop-shadow(0 0 1em #ffdd44aa);
-
-}
-
-/* .hoverGlow {
-  will-change: filter;
-  transition: filter;
-} */
-
 .maxSize {
-  width: 10%;
-  height: 10%;
+  width: 18%;
+  height: 18%;
   /* object-fit: cover; */
-}
-
-.projectImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
 }
 
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2%;
+  margin-top: 2%;
 }
 
 .centerHeader {
@@ -56,12 +39,12 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+/* .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 /* @keyframes logo-spin {
   from {
@@ -127,6 +110,14 @@
   margin: 1em;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .flexRow {
   display: flex;
   flex-direction: row;
@@ -147,20 +138,38 @@
 }
 
 .projectCard {
-
-  width: 30%;
+  width: 80%;
   margin: 1em;
   padding: 1em;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: all 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
 }
 
-.projectCardContainer{
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+.pContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pContainer .project {
+  width: 100%; 
+}
+
+
+
+@media (min-width: 768px) {
+  .projectCardContainer {
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  }
 }
 
 .anchors a{
@@ -170,21 +179,219 @@
 
 .anchors a:hover{
   color: rgb(35, 25, 25);
+}
 
-  /* filter: drop-shadow(0 0 2em #ffffff); */
+.contactLink{
+  color: #fff;
+}
 
+.contactLink:hover{
+  color: rgb(35, 25, 25);
 }
 
 .underline{
   text-decoration: underline;
 }
 
-.bold{
+
+
+.margin{
+  margin: .5em;
+}
+
+.topPosition{
+  position: relative;
+  z-index: 1;
+}
+
+.backHead {
+  position: relative;
+  /* background-color: black; */
+}
+
+.backHead::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('./assets/flowerPattern.jpeg') no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 3.0s ease-in-out;
+}
+
+.backHead:hover::after {
+  opacity: .2;
+}
+
+.buffer {
+  padding-top: .1em;
+  transition: all 3.0s ease-in-out;
+}
+
+.buffer:hover {
+  padding-top: .3em;
+}
+
+.hoverGlow {
+  color: rgb(255, 255, 255);
+  padding: .1em;
+  transition: all 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out; */
+}
+
+.hoverGlow:hover {
+  /* color : rgb(209, 2, 2); */
   font-weight: bold;
-  font-size: 5.5em;
+  transform: scale(1.3);
+}
+
+.font {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+}
+
+.aboutBox::before {
+    content: '';
+    border-bottom: 22px solid #ac6683;
+    width: 6.5rem;
+    display: block;
+    /* margin: 0 auto; */
+    position: relative;
+    left: 1.7rem;
+    top: 3.2rem;
+    z-index: -1;
+}
+
+.resumeBox::before {
+  content: '';
+  border-bottom: 22px solid #ac6683;
+  width: 9rem;
+  display: block;
+  /* margin: 0 auto; */
+  position: relative;
+  left: 1.2rem;
+  top: 3.5rem;
+  z-index: -1;
+}
+
+.projectBox::before {
+  content: '';
+  border-bottom: 22px solid #ac6683;
+  width: 9rem;
+  display: block;
+  /* margin: 0 auto; */
+  position: relative;
+  left: 1rem;
+  top: 3.5rem;
+  z-index: -1;
+}
+
+.contactBox::before {
+  content: '';
+  border-bottom: 22px solid #ac6683;
+  width: 10rem;
+  display: block;
+  /* margin: 0 auto; */
+  position: relative;
+  left: 1.7rem;
+  top: 3.5rem;
+  z-index: -1;
+}
+
+.bold{
+  /* font-weight: bold; */
+  font-size: 8em;
 }
 
 .bold:hover{
-  color: gold;
-  transition: all 1.0s ease-in-out;
+  color: rgb(216, 187, 17);
+  transition: all 3.0s ease-in-out;
+}
+
+.textBox {
+  color: white;
+  padding: 1em;
+  margin-left: 4em;
+  margin-right: 4em;
+  transition: all 2.0s ease-in-out;
+  border: #6e6e6e solid 1px; 
+}
+
+.textBox:hover {
+  background-color: #282c34;
+  border: black solid 3px;
+  transform: scale(1.05);
+}
+
+.projectTitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em;
+  /* text-align: center; */
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.underline {
+  border-bottom: #ac6683 solid 5px;
+}
+
+.textSize {
+  margin-left: 2.5em;
+  font-size: 1.1em;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectImage {
+  width: 60%;
+  height: 60%;
+  border: #ac6683 solid 2px;
+  transition: all .5s ease-in-out;
+}
+
+.projectImage:hover {
+  transform: scale(1.25);
+}
+
+.biggerText {
+  font-size: 1.1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resumeText {
+  font-size: 1.1em;
+  margin-left: 2.5em;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  margin: 10px;
+  padding: 1px;
+}
+
+.resumeText:hover {
+  transform: scale(1.1);
+  padding: 10px;
+}
+
+.githubA {
+  color: #fff;
+  text-decoration: underline;
+  transition: all .1s ease-in-out;
+
+}
+
+.githubA:hover {
+  color: rgb(35, 25, 25);
 }

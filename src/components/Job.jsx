@@ -2,7 +2,7 @@ import React from 'react';
 
 function Job({ jobTitle, company, dates, duties, skills, school, location, degree, graduationDate }) {
     return (
-        <div className="border border-gray-300 rounded-md p-4 mb-8">
+        <div className="border resumeText">
            { jobTitle && <><p className=""><b>{jobTitle}, {company}, {dates}</b></p>
             <ul>
                 {duties && duties.map((duty, index) => (

@@ -1,24 +1,26 @@
 import React from 'react';
 
-function Project({ name, description, technologies, imageUrl, projectLink }) {
+function Project({ name, description, technologies, codeLink, imageUrl, projectLink }) {
   return (
-    <div className="projectCard project border border-gray-300 rounded-md p-4 mb-8">
-      <h3 className="text-2xl font-bold mb-2">{name}</h3>
-      <p className="text-gray-800 text-xl mb-2">{description}</p>
-      <p className="text-green-700 text-xl mb-2">Technologies used: {technologies}</p>
-      <div className="overflow-hidden anchors">
-        <img src={imageUrl} alt={name} className="projectImage max-w-full max-h-full h-auto" />
+    <div className="projectCard">
+      <h3 className="projectTitle"><span className='underline'>{name}</span></h3>
+      <p className="textSize"><span className='underline biggerText'>Description: </span>{description}</p>
+      <p className="textSize"><span className='underline biggerText'>Tech Used: </span>{technologies}</p>
+      <div className="project anchors">
+        <img src={imageUrl} alt={name} className="projectImage" />
         {projectLink && (
           <a
             href={projectLink}
             target="_blank"
             rel=""
-            className=" hover:underline inline-block text-lg"
+            className=" hover:underline "
           >
             View Project
           </a>
         )}
       </div>
+      <div className='container'>
+      <a href="codeLink" className='githubA'>Github Link</a></div>
     </div>
   );
 };
