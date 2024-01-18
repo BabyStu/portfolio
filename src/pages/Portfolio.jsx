@@ -1,5 +1,4 @@
 import Project from '../components/Project';
-import rottenWiki from "../assets/rottenWiki.png";
 
 
 export default function Portfolio() {
