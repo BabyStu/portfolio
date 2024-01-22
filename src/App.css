@@ -6,9 +6,18 @@
   /* text-align: center; */
 }
 
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey: #6e6e6e;
+  --pink: #ac6683;
+  --gold: #d8bb11;
+  --dark: #282c34;
+}
+
 .grey{
-  background-color: #6e6e6e;
-  color: #fff;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 .prof {
@@ -39,37 +48,16 @@
   will-change: filter;
   transition: filter 300ms;
 }
-/* .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
 
 .card {
   padding: 2em;
 }
 
 .footer {
-  background-color: #282c34;
-  color: white;
+  /* background-color: var(--grey); */
+  color: var(--white);
   padding: 2em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .form {
@@ -132,24 +120,24 @@
   flex: 1;
 }
 
-.backColor {
-  background-color: #282c34;
+/* .backColor {
+  background-color: var(--pink);
   color: white;
-}
+} */
 
 .projectCard {
   width: 80%;
   margin: 1em;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px var(--black);
   transition: all 0.3s ease-in-out;
   font-family: 'Roboto', sans-serif;
 }
 
 .projectCard:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,0,0,1);
+  box-shadow: 0 0 20px var(--black);
 }
 
 .pContainer {
@@ -172,28 +160,23 @@
   }
 }
 
+@media (max-width: 568px) {
+  .header {
+    font-size: 0.8em; /* Adjust as needed */
+  }
+}
+
 .anchors a{
-  text-decoration: underline;
-  color: #fff;
+  color: var(--white);
 }
 
 .anchors a:hover{
-  color: rgb(35, 25, 25);
-}
-
-.contactLink{
-  color: #fff;
-}
-
-.contactLink:hover{
-  color: rgb(35, 25, 25);
+  color: var(--pink);
 }
 
 .underline{
   text-decoration: underline;
 }
-
-
 
 .margin{
   margin: .5em;
@@ -207,6 +190,7 @@
 .backHead {
   position: relative;
   /* background-color: black; */
+  border-bottom: var(--grey) solid 5px;
 }
 
 .backHead::after {
@@ -219,7 +203,8 @@
   background: url('./assets/flowerPattern.jpeg') no-repeat center center;
   background-size: cover;
   opacity: 0;
-  transition: opacity 3.0s ease-in-out;
+  transition: opacity 2.0s ease-in-out;
+  border-bottom: var(--pink) solid 5px;
 }
 
 .backHead:hover::after {
@@ -236,7 +221,7 @@
 }
 
 .hoverGlow {
-  color: rgb(255, 255, 255);
+  color: var(--white);
   padding: .1em;
   transition: all 0.3s ease-in-out;
   /* transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out; */
@@ -251,11 +236,25 @@
 .font {
   font-family: 'Lobster', cursive;
   font-size: 3em;
+  transition: all 1.0s ease-in-out;
+}
+
+.font:hover {
+  color: var(--gold);
+}
+
+.hGold {
+  color: var(--white);
+  /* transition: all 1.0s ease-in-out; */
+}
+
+.hGold:hover {
+  color: var(--gold);
 }
 
 .aboutBox::before {
     content: '';
-    border-bottom: 22px solid #ac6683;
+    border-bottom: 22px solid var(--pink);
     width: 6.5rem;
     display: block;
     /* margin: 0 auto; */
@@ -267,7 +266,7 @@
 
 .resumeBox::before {
   content: '';
-  border-bottom: 22px solid #ac6683;
+  border-bottom: 22px solid var(--pink);
   width: 9rem;
   display: block;
   /* margin: 0 auto; */
@@ -279,7 +278,7 @@
 
 .projectBox::before {
   content: '';
-  border-bottom: 22px solid #ac6683;
+  border-bottom: 22px solid var(--pink);
   width: 9rem;
   display: block;
   /* margin: 0 auto; */
@@ -291,7 +290,7 @@
 
 .contactBox::before {
   content: '';
-  border-bottom: 22px solid #ac6683;
+  border-bottom: 22px solid var(--pink);
   width: 10rem;
   display: block;
   /* margin: 0 auto; */
@@ -307,22 +306,22 @@
 }
 
 .bold:hover{
-  color: rgb(216, 187, 17);
+  color: var(--gold);
   transition: all 3.0s ease-in-out;
 }
 
 .textBox {
-  color: white;
+  color: var(--white);
   padding: 1em;
   margin-left: 4em;
   margin-right: 4em;
-  transition: all 2.0s ease-in-out;
-  border: #6e6e6e solid 1px; 
+  transition: all .5s ease-in-out;
+  border: var(--grey) solid 1px; 
 }
 
 .textBox:hover {
   background-color: #282c34;
-  border: black solid 3px;
+  border: var(--gold) solid 3px;
   transform: scale(1.05);
 }
 
@@ -335,7 +334,7 @@
 }
 
 .underline {
-  border-bottom: #ac6683 solid 5px;
+  border-bottom: var(--pink) solid 5px;
 }
 
 .textSize {
@@ -353,12 +352,7 @@
 .projectImage {
   width: 60%;
   height: 60%;
-  border: #ac6683 solid 2px;
-  transition: all .5s ease-in-out;
-}
-
-.projectImage:hover {
-  transform: scale(1.25);
+  border: var(--pink) solid 2px;
 }
 
 .biggerText {
@@ -385,13 +379,25 @@
   padding: 10px;
 }
 
-.githubA {
-  color: #fff;
-  text-decoration: underline;
-  transition: all .1s ease-in-out;
-
+.active {
+  color: var(--gold); 
+  font-weight: bold ;
 }
 
-.githubA:hover {
-  color: rgb(35, 25, 25);
+.highlight {
+  color: var(--white);
+}
+
+.highlight:hover {
+  color: var(--black);
+}
+
+
+.smallBorderBox {
+  border: var(--pink) solid 5px;
+  width: 10%;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--black);
 }

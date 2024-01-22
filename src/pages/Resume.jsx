@@ -56,24 +56,30 @@ export default function Resume() {
   const skills = [
     'JavaScript',
     'SQL',
-    'NoSQL',
     'React',
     'HTML',
-    'CSS'
+    'CSS',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'JSON',
+    'APIs',
+    'Object Oriented Programming',
+    'Debugging'
   ];
 
   const education = [
-    {
-      school: 'Western Illinois University',
-      location: 'Macomb, IL',
-      degree: 'Bachelor of Accounting',
-      graduationDate: 'May 2020'
-    },
     {
       school: 'Scott Community College',
       location: 'Bettendorf, IA',
       degree: 'Associate of Arts',
       graduationDate: 'May 2017'
+    },
+    {
+      school: 'Western Illinois University',
+      location: 'Macomb, IL',
+      degree: 'Bachelor of Accounting',
+      graduationDate: 'May 2020'
     },
     {
       school: 'Northwestern University',
@@ -96,12 +102,12 @@ export default function Resume() {
       </section>
       <section className='flexContainer'>
         <div>
-          <h3 className='center title underline'>Languages</h3>
-          <ul className='card'>
+          <h3 className='center title'><span className='underline'>Skills</span></h3>
+          <div className=''>
             {skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+              <li key={index} className='highlight'>{skill}</li>
             ))}
-          </ul>
+          </div>
         </div>
         <div>
           <h3 className='center title'><span className='underline'>Education</span></h3>

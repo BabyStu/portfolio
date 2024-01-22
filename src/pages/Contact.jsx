@@ -13,14 +13,14 @@ export default function Contact() {
       <h1 className="center contactBox font">Contacts</h1>
       <div className="flexContainer">
         <div className="biggerText">
-          <li className="form">
-            <b className="">Email:</b>{" "}
-            <a className="contactLink" href={`mailto:${Contact.email}`}>{Contact.email}</a>
+          <li className="form anchors">
+            <b className="hGold">Email@</b>{" "}
+            <a className="" href={`mailto:${Contact.email}`}>{Contact.email}</a>
           </li>
-          <li className="form">
-            <b className="">Github: </b>
+          <li className="form anchors">
+            <b className="hGold">Github@ </b>
             <a
-              className="contactLink"
+              className=""
               href={`https://github.com/${Contact.github}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -28,10 +28,10 @@ export default function Contact() {
               {Contact.github}
             </a>
           </li>
-          <li className="form">
-            <b className="">LinkedIn:</b>{" "}
+          <li className="form anchors">
+            <b className="hGold">LinkedIn@</b>{" "}
             <a
-              className="contactLink"
+              className=""
               href={`https://www.linkedin.com/in/${Contact.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"

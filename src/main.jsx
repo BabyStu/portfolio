@@ -1,7 +1,5 @@
-import ReactDOM from 'react-dom/client'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -12,7 +10,6 @@ import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Portfolio from './pages/Portfolio';
 
-// Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
   {
     path: '/',

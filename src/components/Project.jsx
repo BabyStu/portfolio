@@ -15,12 +15,21 @@ function Project({ name, description, technologies, codeLink, imageUrl, projectL
             rel=""
             className=" hover:underline "
           >
-            View Project
+            Project
           </a>
         )}
       </div>
-      <div className='container'>
-      <a href="codeLink" className='githubA'>Github Link</a></div>
+      <div className='container anchors'>
+      {codeLink && (
+          <a
+            href={codeLink}
+            target="_blank"
+            rel=""
+            className=" hover:underline "
+          >
+            Code
+          </a>
+        )}      </div>
     </div>
   );
 };
