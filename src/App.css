@@ -395,9 +395,9 @@
 
 .smallBorderBox {
   border: var(--pink) solid 5px;
-  width: 10%;
-  margin: 1em;
-  padding: 1em;
+  width: 20%;
+  margin: 2%; /* Adjust as needed */
+  padding: 2%; /* Adjust as needed */
   border-radius: 10px;
   box-shadow: 0 0 5px var(--black);
 }
