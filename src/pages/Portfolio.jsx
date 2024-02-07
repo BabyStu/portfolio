@@ -5,6 +5,14 @@ export default function Portfolio() {
 
   const projects = [
     {
+      name: 'Next JS App',
+      description: 'This is a Next JS app, designed to allow the user to take notes and add daily tasks.',
+      technologies: 'Next JS, React, MongoDB, Tailwind CSS, Heroku',
+      imageUrl: 'https://github.com/BabyStu/nextApp/raw/main/public/nextApp.png',
+      projectLink: 'https://cute-dieffenbachia-b6f20e.netlify.app',
+      codeLink: 'https://github.com/BabyStu/nextApp.git',
+    },
+    {
       name: 'IMDbTube',
       description: 'This app is designed to allow the user to search for a movie and get the trailer for that movie, and a short summary of the movie.',
       technologies: 'HTML, JavaScript, APIs, Tailwind CSS',
