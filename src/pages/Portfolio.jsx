@@ -7,7 +7,7 @@ export default function Portfolio() {
     {
       name: 'Next JS App',
       description: 'This is a Next JS app, designed to allow the user to take notes and add daily tasks.',
-      technologies: 'Next JS, React, MongoDB, Tailwind CSS, Heroku',
+      technologies: 'Next JS, React, Tailwind CSS, Daisy UI',
       imageUrl: 'https://github.com/BabyStu/nextApp/raw/main/public/nextApp.png',
       projectLink: 'https://cute-dieffenbachia-b6f20e.netlify.app',
       codeLink: 'https://github.com/BabyStu/nextApp.git',
